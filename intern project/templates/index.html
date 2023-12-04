@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSight</title>
+
+     <!-- External CSS Link -->
+     <link rel="stylesheet" href="/static/css/index.css" >
+
+     <!-- Logo Link -->
+     <link rel="icon" href="/static/images/logo3.jpg">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <label><a href="{{url_for('index')}}">CyberSight</a></label>
+                <li><a href="{{url_for('index')}}" style="color: white;">Home</a></li>
+                <li><a href="{{url_for('visualization')}}">Visualization</a></li>                       
+            </ul>
+        </nav>
+    </header> 
+
+    <!-- Secction One -->
+    <section class="one">
+       <div class="one-div" align="left">
+            <h1>Your Safety, Our Priority. <span>Unleash</span> the Power of Cybersecurity </h1>
+            <p>CyberSight is your trusted partner in the realm of cybersecurity, 
+                offering cutting-edge Anomaly Detection and Visualization Solutions 
+                that illuminate the digital landscape and empower you to safeguard your
+                 digital assets effectively</p>
+
+            <a href="{{url_for('visualization')}}"><button>Get started</button></a>
+
+
+
+       </div> 
+       <div class="div-two">
+            <img src="/static/images/Data report-amico.png" alt="">
+       </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-one">
+            <p> Developed By <br> 
+            <a href="https://vignesh227.github.io/Personal-Portfolio/" target="_blank" class="prof">
+                Vignesh Pandian
+            </a>
+            </p>
+        </div>
+        
+        <div class="social-links" align="right">
+
+            <!-- LinkedIn Profile Link -->
+            <a href="https://linkedin.com/in/vigneshpandian-" target="_blank" class="links">
+                Linkedin
+                <img src="/static/images/linkedin.png" alt="linkedin-image">
+            </a>
+
+
+            <!-- Github Profile Link -->
+            <a href="https://github.com/Vignesh227" target="_blank" class="links">
+                Github
+                <img src="/static/images/github.png" alt="github-image">
+            </a>
+        </div>
+        
+        
+    </footer>
+    <p class="copy"> &copy; 2023 CyberSight</p>
+
+</body>
+</html>

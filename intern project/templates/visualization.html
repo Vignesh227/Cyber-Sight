@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSight Visualization</title>
+
+     <!-- External CSS Link -->
+     <link rel="stylesheet" href="/static/css/visualization.css" >
+
+     <!-- Logo Link -->
+     <link rel="icon" href="/static/images/logo3.jpg">
+
+
+     <!-- Plotly Link -->
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<>
+
+    <!-- Navbar -->
+    <header id="one">
+        <nav>
+            <ul>
+                <label><a href="{{url_for('visualization')}}">CyberSight</a></label>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('visualization')}}"  style="color: white;">Visualization</a></li>                       
+            </ul>
+        </nav>
+    </header> 
+
+    <!-- Section One -->
+    <section class="one" >
+        <form action="{{url_for('visualize')}}" method="POST" align="center">
+
+            <!-- Start Date Input -->
+            <label id="start">Start Date</label>
+            <input type="date" placeholder="hello" name="start" id="start" value="startdate" required>
+    
+            <!-- End Date Input -->
+            <label id="end">End Date</label>
+            <input type="date" name="end" id="end" value="enddate" required>
+    
+            <!-- Input Use Case -->
+            <label id="usecase">Use case</label>
+            <select name="usecase" id="usecase" required>
+                <option value="ipprofiling">Ip Profiling</option>
+                <option value="ddos">DDoS</option>
+            </select>
+    
+            <!-- Submit Button -->
+            <input type="submit" class="btn" value="VISUALIZE" >
+        </form>
+        
+    </section>
+    
+    
+    
+    <!-- Cards Visualization -->
+        <!-- <div class="graph-container">
+            <h2>Over<span>view</span></h2>
+            <div class="cards">
+                <div class="card card-one">
+                    <p>Total no of Records</p>
+                    <h3>233</h3>
+                    
+                </div>
+                <div class="card card-two">
+                    <p>Total Anomalous Records</p>
+                    <h3>16</h3>
+                </div>
+                    <div class="card card-three">
+                        <p>Anomalous IP's</p>
+                        
+                        <h3>192.168.0.145</h3>
+                    </div>
+            </div>
+        </div> -->
+
+
+    <div class="graph-container">
+
+        {% set index = 0 %}
+        {% if scatter %}
+
+        <!-- Cards Visualization -->
+        <h2>Over<span>view</span></h2>
+        <div class="cards">
+            <div class="card card-one">
+                <p>Total No of Records</p>
+                <h3>{{total[0]}}</h3>
+                
+            </div>
+            <div class="card card-two">
+                <p>Total Anomalous Records</p>
+                <h3>{{total[1]}}</h3>
+            </div>
+            {% if total[2] %}
+                <div class="card card-three">
+                    <p>Anomalous IP's</p>
+                    <!-- <h3>
+                        {% for i in total[2] %}
+                            {{i}} ,
+                        {% endfor %}
+                    </h3> -->
+                    <h3>{{ total[2] }}</h3>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Line Graph -->
+        {% if line %}
+            <div class="line-graph">
+                <div class="line">
+                    {{ line | safe}}
+                </div>
+            </div>
+        {% endif %}
+
+        
+        <!-- Scatter and Bar Graphs -->
+        {% for key, graph in scatter.items() %}
+            <div class="scatter-graph">
+                <h4>Date : {{ key }}</h4>
+                <div class="scatter">
+                    {{ graph | safe }}
+                </div>
+            </div>
+
+            {% if bar %}
+                <div class="bar-graph">
+                    <!-- <h2>{{ key }}</h2> -->
+                    <div class="bar">
+                        {{ bar[key] | safe }}
+                    </div>
+                </div>
+            {% endif %}
+    
+            {% set index = index + 1 %}
+        {% endfor %}
+        {% endif %}
+    
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-one">
+            <p> Developed By <br> 
+            <a href="https://vignesh227.github.io/Personal-Portfolio/" target="_blank" class="prof">
+                Vignesh Pandian
+            </a>
+            </p>
+        </div>
+        
+        <div class="social-links" align="right">
+
+            <!-- LinkedIn Profile Link -->
+            <a href="https://linkedin.com/in/vigneshpandian-" target="_blank" class="links">
+                Linkedin
+                <img src="/static/images/linkedin.png" alt="linkedin-image">
+            </a>
+
+
+            <!-- Github Profile Link -->
+            <a href="https://github.com/Vignesh227" target="_blank" class="links">
+                Github
+                <img src="/static/images/github.png" alt="github-image">
+            </a>
+        </div>
+        
+        
+    </footer>
+    <p class="copy"> &copy; 2023 CyberSight</p>
+
+
+</body>
+</html>
