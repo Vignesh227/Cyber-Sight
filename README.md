@@ -7,3 +7,11 @@ A simple network analytics dashboard that does IP Profiling and DDoS Attack Dete
 
 ## DDoS Attack ⚠️
 - A distributed denial-of-service (DDoS) attack is a malicious attempt to disrupt the normal traffic of a targeted server, service, or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
+
+## Web Page 🖥️
+### Home
+![Home Page](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/62341246-fb59-4ea2-975f-eb9ae05c9d22)
+
+### IP Profiling
+
+
