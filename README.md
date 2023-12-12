@@ -12,10 +12,16 @@ A simple network analytics dashboard that does IP Profiling and DDoS Attack Dete
 ### Home
 ![Home Page](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/62341246-fb59-4ea2-975f-eb9ae05c9d22)
 
-### IP Profiling
+### Visualization Page 📊
 ![ddos - 1](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/be7cdd08-b67a-42e2-8ff8-1b044de0020c)
+
+### IP Profiling
 ![sample new - 1](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/99f90ced-9ef7-4745-b1ac-b8b7a2376128)
 ![sample new - 2](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/bff39dd0-c46a-462a-8fad-67d986a1ecfb)
+
+### DDoS
+![ddos - 2](https://github.com/Vignesh227/Cyber-Sight/assets/96369223/351841c5-df7a-42f7-bb21-366f533866ae)
+
 
 
 
